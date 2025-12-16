@@ -36,7 +36,6 @@ blog.use('/users', routes.user);
 blogAdmin.use('/auth', routes.auth);
 blogAdmin.use('/posts', auth.checkRole('ADMIN'), routes.postAdmin);
 blogAdmin.use('/users', auth.checkRole('ADMIN'), routes.userAdmin);
-blogAdmin.use('/comments', auth.checkRole('ADMIN'), routes.adminComment);
 
 app.use((req, res) => {
   const error = new NotFoundError('This page does not exist.');

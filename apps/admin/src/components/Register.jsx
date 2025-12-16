@@ -80,7 +80,7 @@ const Register = function () {
 
     try {
       await api.register(registerData);
-      navigate('/login', { replace: true });
+      navigate('/auth', { replace: true });
     } catch (error) {
       const serverErrs = {};
       error.formErrors.forEach((field) => (serverErrs[field.path] = field.msg));

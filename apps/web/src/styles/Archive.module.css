@@ -56,7 +56,16 @@
 
   .archive h1 {
     margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 19px;
+  }
+  .archive_card h2 {
+    font-size: 17px;
+  }
+
+  .archive_card svg {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
   }
 }
 

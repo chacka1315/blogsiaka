@@ -18,10 +18,3 @@ export default defineConfig({
   },
 });
 
-// export default defineConfig({
-//   plugins: [
-//     react({
-//       jsxRuntime: 'automatic',
-//     }),
-//   ],
-// });

@@ -69,6 +69,10 @@
   .post_card h1 {
     font-size: var(--mobile-title-size);
   }
+
+  .post_card .snippet {
+    font-size: 15px;
+  }
 }
 
 @media (min-width: 701px) and (max-width: 1050px) {

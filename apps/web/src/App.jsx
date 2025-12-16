@@ -8,39 +8,21 @@ import { NavLink, Link, Outlet } from 'react-router';
 import { Button } from '@siakablog/ui';
 
 const App = function () {
-  const [user, setUser] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    async function getUser() {
-      try {
-        const user = await api.getMe();
-        setUser(user);
-      } catch {
-        console.log();
-      }
-    }
-    getUser();
-  }, []);
 
   return (
     <div className={styles.layout}>
-      <Header user={user} isOpen={isOpen} uptIsOpen={setIsOpen} />
-      <Menu user={user} isOpen={isOpen} uptIsOpen={setIsOpen} />
+      <Header isOpen={isOpen} uptIsOpen={setIsOpen} />
+      <Menu isOpen={isOpen} uptIsOpen={setIsOpen} />
       <main className={styles.main} style={isOpen ? { display: 'none' } : {}}>
-        <Outlet context={{ user }} />
+        <Outlet />
       </main>
       {!isOpen && <Footer />}
     </div>
   );
 };
 
-function Menu({ user, isOpen, uptIsOpen }) {
-  const handleLogoutLink = () => {
-    uptIsOpen(false);
-    api.logout();
-  };
-
+function Menu({ isOpen, uptIsOpen }) {
   const closeMenu = () => uptIsOpen(false);
 
   return (
@@ -49,17 +31,6 @@ function Menu({ user, isOpen, uptIsOpen }) {
         isOpen ? `${styles.menu} ${styles.show_menu}` : styles.hide_menu
       }
     >
-      {user && (
-        <div className={styles.menu_avatar}>
-          {user.avatar ? (
-            <img src={user.avatar} alt="avatar" />
-          ) : (
-            <CircleUser />
-          )}
-          <p>{user.username}</p>
-        </div>
-      )}
-
       <NavLink to="/archive" onClick={closeMenu}>
         Archive
       </NavLink>
@@ -80,17 +51,6 @@ function Menu({ user, isOpen, uptIsOpen }) {
         <i class="devicon-github-original"></i>
         Github
       </Link>
-      {user ? (
-        <a href="/" className={styles.logout_link} onClick={handleLogoutLink}>
-          <LogOut size="20px" />
-          Logout
-        </a>
-      ) : (
-        <Link to="/login" className={styles.login_link} onClick={closeMenu}>
-          <LogIn />
-          Sign in
-        </Link>
-      )}
     </div>
   );
 }

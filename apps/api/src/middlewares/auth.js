@@ -12,6 +12,7 @@ const verifyToken = (req, res, next) => {
   }
 
   const token = bearerHeader.split(' ')[1];
+
   jwt.verify(token, process.env.JWT_SECRET, (err, authData) => {
     if (err) {
       const error = new UnauthorizedError('Your are not authenticated.');

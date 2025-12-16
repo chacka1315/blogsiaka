@@ -5,6 +5,7 @@ import Article from './components/Article';
 import NewPost from './components/NewPost';
 import UpdatePost from './components/updatePost';
 import App from './App';
+import Register from './components/Register';
 
 const routes = [
   {
@@ -19,6 +20,7 @@ const routes = [
     ],
   },
   { path: '/auth', element: <Auth />, errorElement: <ErrorPage /> },
+  { path: '/register', element: <Register />, errorElement: <ErrorPage /> },
 ];
 
 export default routes;
