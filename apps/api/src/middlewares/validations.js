@@ -58,17 +58,10 @@ export const postValidation = [
   body('title').trim().notEmpty().withMessage('Title should not be empty.'),
   body('snippet')
     .trim()
-    .isLength({ min: 200, max: 400 })
-    .withMessage('Blog snippet must be between 200 and 400 characters.'),
+    .isLength({ min: 10, max: 400 })
+    .withMessage('Blog snippet must be between 10 and 400 characters.'),
   body('content')
     .trim()
-    .isLength({ min: 400 })
-    .withMessage('Blog content must be at least 300 characters.'),
-];
-
-export const commentValidation = [
-  body('content')
-    .trim()
-    .isLength({ min: 1, max: 1000 })
-    .withMessage('Comment content must be between 2 and 1000 characters.'),
+    .isLength({ min: 10 })
+    .withMessage('Blog content must be at least 10 characters.'),
 ];
