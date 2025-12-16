@@ -41,7 +41,7 @@
 }
 
 .menu a i {
-  color: #fff;
+  color: var(--color-white);
 }
 
 .show_menu {
