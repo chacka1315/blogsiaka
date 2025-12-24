@@ -4,8 +4,10 @@ This project teaches how to design a backend API independently from any frontend
 
 ## 🎨 Live preview
 The server will take a few second to start as it'is deployed on free plan (Le serveur prendra un peu de temps pour demarer car l'app est deploye sur un plan gratuit de Render). 
+AS you don't have access to the admin app, this is a screenshot:
+![Admin app](https://res.cloudinary.com/deeklaav9/image/upload/v1766526584/blog_api2_yq4tcx.png)
 [See the apllication (Voir l'application)](https://siakablog-web-d1yr.vercel.app/)
-- Be aware that a i refactoring the app by removing Comments part so users can't authenticate anymore, they can't comments posts (The site is free as it is my personal blog, i don't need comments) and you will don't see any comment stuff. Only admin application need a authentication. If you want to see the original source code [See here](https://github.com/chacka1315/blog-app)
+- Be aware that i refactored the app by removing Comments part so users can't authenticate anymore, they can't comments posts (The site is free as it is my personal blog, i don't need comments) and you will don't see any comment stuff. Only admin application need a authentication. If you want to see the original source code [See here](https://github.com/chacka1315/blog-app)
 
 ## 🚀 Project Summary
 - This application provides a JSON API for a blog system where:
