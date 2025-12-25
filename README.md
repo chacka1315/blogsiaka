@@ -5,7 +5,6 @@ This project teaches how to design a backend API independently from any frontend
 ## 🎨 Live preview
 The server will take a few second to start as it'is deployed on free plan (Le serveur prendra un peu de temps pour demarer car l'app est deploye sur un plan gratuit de Render). 
 AS you don't have access to the admin app, this is a screenshot:
-![Admin app](https://res.cloudinary.com/deeklaav9/image/upload/v1766526584/blog_api2_yq4tcx.png)
 <p align="center">
   <img src="https://res.cloudinary.com/deeklaav9/image/upload/v1766526584/blog_api2_yq4tcx.png" alt="Admin app" width="60%">
 </p>
